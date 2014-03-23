@@ -26,8 +26,11 @@ if (mysqli_connect_errno())
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
 function message($Number, $Name){
-$result = mysqli_query($con,"INSERT INTO Chats (Number, Name) VALUES ('$Number', '$Name')")
+$result = mysqli_query($con,"INSERT INTO Chats (Numbers, Name) VALUES ('$Numbers', '$Name')")
 if (mysqli_num_rows($result) != 0 && ){
     $row = mysqli_fetch_array($result);}
 
+
+    $x = mysqli_query("SELECT * FROM Chats WHERE Name = '$place'")
+    $row = mysqli_fetch_array($x);
 ?>
