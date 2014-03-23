@@ -15,10 +15,11 @@ $client = new Services_Twilio($sid, $token);//random unnecesary things
 // check out the list resource examples on this page
 $sms = $client->account->sms_messages->get("SM800f449d0399ed014aae2bcc0cc2f2ec");
 echo $sms->body;
+*/
 $message = explode($ui,  "  ");// exploding into location place and body 
 $place = $message[0];
 $body =  $message[1];
-*/
+
 $con=mysqli_connect("sql4.freesqldatabase.com:3306","sql434134","bY2%tL9%","sql434134");
 if (mysqli_connect_errno())
     {
