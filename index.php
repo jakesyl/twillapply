@@ -4,7 +4,7 @@ $ui = $_POST['Body'];//Getting the body
 $from = $_POST['From'];//phone number its coming from 
 
 // Get the PHP helper library from twilio.com/docs/php/install
-/require_once('/twilio-php/Services/Twilio.php'); // Loads the library
+require_once('/twilio-php/Services/Twilio.php'); // Loads the library
  
 // Your Account Sid and Auth Token from twilio.com/user/account
 $sid = "AC3b392bc11cfc9762ed23e1488b56c4d2"; //tokens
