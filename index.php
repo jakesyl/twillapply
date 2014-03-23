@@ -38,8 +38,7 @@ else{
             $number = $row3[$x]["number"];
             $ournum = +19088180650;
             $sms = $client->account->sms_messages->create($ournum,"+1".$number,$body,array());
-
-    } 
+}}
     else{
  $y = mysqli_query("SELECT * FROM Chats WHERE location = '$place'");
             $row3 = mysqli_fetch_array($x);    
