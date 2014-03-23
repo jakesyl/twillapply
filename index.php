@@ -15,10 +15,9 @@ $client = new Services_Twilio($sid, $token);
 // check out the list resource examples on this page
 $sms = $client->account->sms_messages->get("SM800f449d0399ed014aae2bcc0cc2f2ec");
 echo $sms->body;
-function breakup($data){
-    $x = explode($data,  "  ");
-    return $x;// $x 
-}
+$message = explode($ui,  "  ");
+$place = $message[0];
+$body =  $message[1];
 
 $con=mysqli_connect("sql4.freesqldatabase.com","sql434134","bY2%tL9%","sql434134");
 if (mysqli_connect_errno())
