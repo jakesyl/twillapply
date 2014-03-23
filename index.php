@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 $ui = $_POST['Body'];
@@ -39,3 +40,5 @@ else{
     }
     
 ?>
+=======
+>>>>>>> FETCH_HEAD
