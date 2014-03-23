@@ -1,6 +1,10 @@
 <?php
+
+$body = $_POST['Body'];
+$number = $_POST['From'];
+
 // Get the PHP helper library from twilio.com/docs/php/install
-require_once('/twilio-php/Services/Twilio.php'); // Loads the library
+/*require_once('/twilio-php/Services/Twilio.php'); // Loads the library
  
 // Your Account Sid and Auth Token from twilio.com/user/account
 $sid = "AC3b392bc11cfc9762ed23e1488b56c4d2"; 
@@ -14,10 +18,8 @@ echo $sms->body;
 function breakup($data){
     $x = explode($data,  "  ");
     return $x;// $x 
-}
-<<<<<<< HEAD
-echo 
-=======
+}*/
+
 $con=mysqli_connect("sql4.freesqldatabase.com","sql434134","bY2%tL9%","sql434134");
 if (mysqli_connect_errno())
     {
@@ -28,5 +30,4 @@ $result = mysqli_query($con,"INSERT INTO Chats (Number, Name) VALUES ('$Number',
 if (mysqli_num_rows($result) != 0 && ){
     $row = mysqli_fetch_array($result);}
 
->>>>>>> FETCH_HEAD//idgaf
 ?>
