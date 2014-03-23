@@ -20,32 +20,32 @@ $message = explode($ui,  "  ");// exploding into location place and body
 $place = $message[0];
 $body =  $message[1];
 
-$con=mysql_connect("sql4.freesqldatabase.com:3306","sql434134","bY2%tL9%","sql434134");
-/*if (mysql_connect_errno())
+$con=mysql_connect("sql4.freesqldatabase.com:3306","sql434134","bY2%tL9%","sql434134");//used a free sql service because heroku is retarted, use digital ocean in the future
+/*if (mysql_connect_errno())//TODO convert all mysql back to mysqli
     {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
+    }//blanked out error cuz it was screwin us up, didn't help...
     */
 else{
     
 }
-
- $x = mysql_query("SELECT * FROM Chats WHERE number = '$number'");
+//TODO ability to associate with multiple arrays
+ $x = mysql_query("SELECT * FROM Chats WHERE number = '$number'");//if your number is already there why add it again 
     $row2 = mysql_fetch_array($x);
     if(count($row2)==0){
         $result = mysql_query($con,"INSERT INTO Chats (Numbers, Location) VALUES ('$number', '$place')");
             $y = mysql_query("SELECT * FROM Chats WHERE location = '$place'");
-            $row3 = mysql_fetch_array($x);
-            for($x=0; $x<count(row3); $x++){
-            $number = $row3[$x]["number"];
-            $ournum = +19088180650;
+            $row = mysql_fetch_array($x);//fetches the row
+            for($x=0; $x<count($row); $x++){//gets all numbers within location
+            $number = $row[$x]["number"];
+            $ournum = 9088180650;//phone number (ours)
             $sms = $client->account->sms_messages->create($ournum,$number,$body,array());
 }}
     else{
  $y = mysql_query("SELECT * FROM Chats WHERE location = '$place'");
-            $row3 = mysql_fetch_array($x);    
-            for($x=0; $x<count(row3); $x++){
-            $number = $row3[$x]["number"];
+            $row = mysql_fetch_array($x);    
+            for($x=0; $x<count($row); $x++){
+            $number = $row[$x]["number"];
             $ournum = +19088180650;
             $sms = $client->account->sms_messages->create($ournum,$number,$body,array());
             }
