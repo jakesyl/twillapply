@@ -47,5 +47,4 @@ else{
             $ournum = +19088180650;
             $sms = $client->account->sms_messages->create($ournum,"+1".$number,$body,array());
             }
-    
-?>
+   ?>
