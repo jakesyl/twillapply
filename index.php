@@ -28,7 +28,7 @@ else{
     
 }
 
- $x = mysqli_query("SELECT * FROM Chats WHERE number = '$number'")
+ $x = mysqli_query("SELECT * FROM Chats WHERE number = '$number'");
     $row2 = mysqli_fetch_array($x);
     if(count($row2)==0){
         $result = mysqli_query($con,"INSERT INTO Chats (Numbers, Location) VALUES ('$number', '$place')")
