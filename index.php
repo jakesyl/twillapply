@@ -16,5 +16,5 @@ function breakup($data){
     $x = explode($data,  "  ");
     return $x;// $x 
 }
-
+echo 
 ?>
