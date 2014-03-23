@@ -32,10 +32,21 @@ else{
     $row2 = mysqli_fetch_array($x);
     if(count($row2)==0){
         $result = mysqli_query($con,"INSERT INTO Chats (Numbers, Location) VALUES ('$number', '$place')")
-            //this is for sending 
+            $y = mysqli_query("SELECT * FROM Chats WHERE location = '$place'")
+            $row3 = mysqli_fetch_array($x);
+            for($x=0; $x<count(row3); $x++){
+            $number = $row3[$x]["number"];
+            $ournum = +19088180650;
+            $sms = $client->account->sms_messages->create($ournum,"+1".$number,$body,array());
+
     } 
     else{
-        //this is for sending
-    }
+ $y = mysqli_query("SELECT * FROM Chats WHERE location = '$place'")
+            $row3 = mysqli_fetch_array($x);    
+            for($x=0; $x<count(row3); $x++){
+            $number = $row3[$x]["number"];
+            $ournum = +19088180650;
+            $sms = $client->account->sms_messages->create($ournum,"+1".$number,$body,array());
+            }
     
 ?>
