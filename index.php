@@ -1,10 +1,10 @@
 <?php
 
-$body = $_POST['Body'];
-$number = $_POST['From'];
+$ui = $_POST['Body'];
+$from = $_POST['From'];
 
 // Get the PHP helper library from twilio.com/docs/php/install
-/*require_once('/twilio-php/Services/Twilio.php'); // Loads the library
+/require_once('/twilio-php/Services/Twilio.php'); // Loads the library
  
 // Your Account Sid and Auth Token from twilio.com/user/account
 $sid = "AC3b392bc11cfc9762ed23e1488b56c4d2"; 
@@ -18,7 +18,7 @@ echo $sms->body;
 function breakup($data){
     $x = explode($data,  "  ");
     return $x;// $x 
-}*/
+}
 
 $con=mysqli_connect("sql4.freesqldatabase.com","sql434134","bY2%tL9%","sql434134");
 if (mysqli_connect_errno())
