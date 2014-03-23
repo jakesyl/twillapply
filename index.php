@@ -31,8 +31,8 @@ else{
  $x = mysqli_query("SELECT * FROM Chats WHERE number = '$number'");
     $row2 = mysqli_fetch_array($x);
     if(count($row2)==0){
-        $result = mysqli_query($con,"INSERT INTO Chats (Numbers, Location) VALUES ('$number', '$place')")
-            $y = mysqli_query("SELECT * FROM Chats WHERE location = '$place'")
+        $result = mysqli_query($con,"INSERT INTO Chats (Numbers, Location) VALUES ('$number', '$place')");
+            $y = mysqli_query("SELECT * FROM Chats WHERE location = '$place'");
             $row3 = mysqli_fetch_array($x);
             for($x=0; $x<count(row3); $x++){
             $number = $row3[$x]["number"];
@@ -41,7 +41,7 @@ else{
 
     } 
     else{
- $y = mysqli_query("SELECT * FROM Chats WHERE location = '$place'")
+ $y = mysqli_query("SELECT * FROM Chats WHERE location = '$place'");
             $row3 = mysqli_fetch_array($x);    
             for($x=0; $x<count(row3); $x++){
             $number = $row3[$x]["number"];
