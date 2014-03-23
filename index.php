@@ -43,7 +43,8 @@ else{
 }}
     else{
  $y = mysql_query("SELECT * FROM Chats WHERE location = '$place'");
-            $row = mysql_fetch_array($x);    
+            $row = mysql_fetch_array($x);//ALL COMMENTS FROM ABOVE
+                
             for($x=0; $x<count($row); $x++){
             $number = $row[$x]["number"];
             $ournum = +19088180650;
