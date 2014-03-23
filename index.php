@@ -1,5 +1,4 @@
 <?php
-echo "me";
 // Get the PHP helper library from twilio.com/docs/php/install
 require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
  
@@ -16,5 +15,14 @@ function breakup($data){
     $x = explode($data,  "  ");
     return $x;// $x 
 }
+$con=mysqli_connect("sql4.freesqldatabase.com","sql434134","bY2%tL9%","sql434134");
+if (mysqli_connect_errno())
+    {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
+function message($Number, $Name){
+$result = mysqli_query($con,"INSERT INTO Chats (Number, Name) VALUES ('$Number', '$Name')")
+if (mysqli_num_rows($result) != 0 && ){
+    $row = mysqli_fetch_array($result);}
 
 ?>
