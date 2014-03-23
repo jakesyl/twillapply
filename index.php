@@ -24,19 +24,13 @@ if (mysqli_connect_errno())
     {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
-function message($Number, $Name){
-$result = mysqli_query($con,"INSERT INTO Chats (Numbers, Name) VALUES ('$Numbers', '$Name')")
-if (mysqli_num_rows($result) != 0 && ){
-    $row = mysqli_fetch_array($result);}
-<<<<<<< HEAD
+else{
+    
+}
 
-
-    $x = mysqli_query("SELECT * FROM Chats WHERE Name = '$place'")
-    $row = mysqli_fetch_array($x);
-=======
  $x = mysqli_query("SELECT * FROM Chats WHERE number = '$number'")
-    $row = mysqli_fetch_array($x);
-    if(count($row)==0){
+    $row2 = mysqli_fetch_array($x);
+    if(count($row2)==0){
         $result = mysqli_query($con,"INSERT INTO Chats (Numbers, Location) VALUES ('$number', '$place')")
             //this is for sending
     } 
@@ -44,10 +38,4 @@ if (mysqli_num_rows($result) != 0 && ){
         //this is for sending
     }
     
-    $con=mysqli_connect("sql4.freesqldatabase.com","sql434134","bY2%tL9%","sql434134");
-if (mysqli_connect_errno())
-    {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
->>>>>>> FETCH_HEAD
 ?>
