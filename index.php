@@ -4,7 +4,7 @@ $ui = $_POST['Body'];//Getting the body
 $from = $_POST['From'];//phone number its coming from 
 
 // Get the PHP helper library from twilio.com/docs/php/install
-require_once('/Services/Twilio.php'); // Loads the library
+require_once('http://mysterious-meadow-7659.herokuapp.com/Services/Twilio.php'); // Loads the library
  
 // Your Account Sid and Auth Token from twilio.com/user/account
 $sid = "AC3b392bc11cfc9762ed23e1488b56c4d2"; //tokens
@@ -37,7 +37,7 @@ else{
             for($x=0; $x<count(row3); $x++){
             $number = $row3[$x]["number"];
             $ournum = +19088180650;
-            $sms = $client->account->sms_messages->create($ournum,"+1".$number,$body,array());
+            $sms = $client->account->sms_messages->create($ournum,$number,$body,array());
 }}
     else{
  $y = mysqli_query("SELECT * FROM Chats WHERE location = '$place'");
@@ -45,7 +45,7 @@ else{
             for($x=0; $x<count(row3); $x++){
             $number = $row3[$x]["number"];
             $ournum = +19088180650;
-            $sms = $client->account->sms_messages->create($ournum,"+1".$number,$body,array());
+            $sms = $client->account->sms_messages->create($ournum,$number,$body,array());
             }
             }
    ?>
