@@ -1,5 +1,5 @@
 <?php
-echo "me";
+//echo "me";//A test
 // Get the PHP helper library from twilio.com/docs/php/install
 require_once('/path/to/twilio-php/Services/Twilio.php'); // Loads the library
  
@@ -15,6 +15,7 @@ echo $sms->body;
 function breakup($data){
     $x = explode($data,  "  ");
     return $x;// $x 
+//Read the documentation dummy!
 }
 
 ?>
