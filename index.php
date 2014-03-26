@@ -32,12 +32,10 @@ function sendlet ($number, $ournum, $sms, $client, $body, $row){//add some param
 $con=mysql_connect("sql4.freesqldatabase.com:3306","sql434134","bY2%tL9%","sql434134");//used a free sql service because heroku is retarted, use digital ocean in the future
     if (mysqli_connect_errno())//TODO convert all mysql back to mysqli
     {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();//for some reason heroku doesn't believe i should know when there's an error
     }
     
-else{
-    
-}
+
 //TODO ability to associate with multiple arrays
  $x = mysqli_query($link, "SELECT * FROM Chats WHERE number = '$number'");//if your number is already there why add it again 
     $row2 = mysql_fetch_array($x);
