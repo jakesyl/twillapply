@@ -1,4 +1,6 @@
-MIT License
+## Liscence is for twilio only
+
+##MIT License
 
 Copyright (C) 2011, Twilio, Inc. <help at twilio dot com>
 Copyright (C) 2011, Neuman Vong <neuman at twilio dot com>
