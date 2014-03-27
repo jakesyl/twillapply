@@ -44,6 +44,7 @@ $con=mysql_connect("sql4.freesqldatabase.com:3306","sql434134","bY2%tL9%","sql43
             $y = mysqli_query($con, "SELECT * FROM Chats WHERE location = '$place'");
            sendlet ($number, $ournum, $sms, $client, $body, $row);
 }}
+//this is for when the # doesnt exist in the chat
     else{
  $y = mysql_query("SELECT * FROM Chats WHERE location = '$place'");
            sendlet ($number, $ournum, $sms, $client, $body, $row);//this function shortens it a bit
