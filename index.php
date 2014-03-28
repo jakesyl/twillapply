@@ -29,7 +29,8 @@ function sendlet ($number, $ournum, $sms, $client, $body, $row){//add some param
             $ournum = 9088180650;//phone number (ours)
             $sms = $client->account->sms_messages->create($ournum,$number,$body,array());//Creates a new message to there umber
 }// that function was fun to write :D, just kidding, twillios a pain in the ass, that dude made it look so god damn easy
-$con=mysql_connect("sql4.freesqldatabase.com:3306","sql434134","bY2%tL9%","sql434134");//used a free sql service because heroku is retarted, use digital ocean in the future
+//$con=mysql_connect("sql4.freesqldatabase.com:3306","sql434134","bY2%tL9%","sql434134");//heroku is shit, but we're using postgresql
+
     if (mysqli_connect_errno())//TODO convert all mysql back to mysqli
     {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();//for some reason heroku doesn't believe i should know when there's an error
