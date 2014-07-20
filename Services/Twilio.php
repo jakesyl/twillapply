@@ -284,7 +284,7 @@ class Services_Twilio extends Services_Twilio_Resource
      * :throws: A :php:class:`Services_Twilio_RestException` if the Response is
      *      in the 300-500 range of status codes.
      */
-    private function _processResponse($response)
+    private function _processResponse($response)//how the hell does this work, and why doesn't it reference other files.
     {
         list($status, $headers, $body) = $response;
         if ($status === 204) {
@@ -306,8 +306,8 @@ class Services_Twilio extends Services_Twilio_Resource
             $status,
             isset($decoded->message) ? $decoded->message : '',
             isset($decoded->code) ? $decoded->code : null,
-            isset($decoded->more_info) ? $decoded->more_info : null
-        );
+            isset($decoded->more_info) ? $decoded->more_info : null//the internship is funny
+        ); 
     }
 }
 
