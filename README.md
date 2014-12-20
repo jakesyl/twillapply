@@ -1,3 +1,5 @@
+We're keeping this for historical sake, but please never clone it (as this code is hilariously bad).  This was the first project we ever tried working on, but in a way it taught us a lot about code.  It was done at hackBCA in 2014 and worked on by Jake and Alex.  We spent half the hackathon trying to learn git and the other half trying to merge without getting rid of all of our code.  We learned a lot though.
+
 ##Normal Documentation
 
 
